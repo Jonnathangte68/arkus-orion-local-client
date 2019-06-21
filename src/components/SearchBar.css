@@ -1,0 +1,26 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+  
+.box .div-left {
+    width: 22%;
+}
+
+.box .div-left-last {
+    width: 16%;
+}
+
+.space-left {
+    margin-left: 2%;
+}
+
+.wide-space-left {
+    margin-left: 10%;
+}
+
+.top-space {
+    padding-top: 2.4rem;
+    text-align: right;
+}

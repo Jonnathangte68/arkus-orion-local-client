@@ -1,0 +1,34 @@
+.top-row-list .Polaris-List {
+    list-style-type: none;
+}
+
+.Polaris-List {
+    padding-left: 0px;
+}
+
+.top-row-list .Polaris-List__Item{
+    display: inline;
+}
+
+.top-row-list .Polaris-List__Item:nth-child(1){
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+
+.top-row-list .Polaris-List__Item:nth-child(2){
+    float: right;
+}
+
+.Polaris-Button {
+    background:#8893ce;
+    color: white;
+    font-weight: bold;
+}
+
+.search-bar {
+    padding: 12% 0% 0% 0%;
+}
+
+.main-content {
+    margin-top: 3%;
+}

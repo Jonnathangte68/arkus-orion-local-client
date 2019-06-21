@@ -1,0 +1,11 @@
+.create-skill-page .Polaris-Stack__Item {
+    margin-left: 0px;
+}
+
+.create-skill-page .Polaris-Stack__Item--fill .Polaris-Button {
+    float: right;
+}
+
+.float-right {
+    float: right;
+}
