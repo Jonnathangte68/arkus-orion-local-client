@@ -6,13 +6,19 @@ import SkillDash from './components/SkillDash';
 import SkillCreate from './components/SkillCreate';
 import * as serviceWorker from './serviceWorker';
 import {AppProvider} from '@shopify/polaris';
-
-
+import NavBar from './components/NavBar'
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from 'react-apollo'
 
 import {
     BrowserRouter,
     Route
 } from 'react-router-dom';
+import UserTable from './components/User/UserTable';
+
+const client = new ApolloClient({
+    uri: 'https://learn-hasura-b-end.herokuapp.com/v1/graphql'
+  })
 
 const theme = {
     colors: {
@@ -32,11 +38,16 @@ const theme = {
 
 ReactDOM.render(
     <AppProvider theme={theme}>
-         <BrowserRouter>
-            <Route exact path="/" component={App} />
-            <Route path="/dashboard-skills" component={SkillDash} />
-            <Route path="/skill/new" component={SkillCreate} />
-        </BrowserRouter>
+        <ApolloProvider client={client}>
+            <BrowserRouter>
+                <div>
+                <Route exact path="/" component={App} />
+                <Route path="/users" component={UserTable} />
+                <Route path="/dashboard-skills" component={SkillDash} />
+                <Route path="/skill/new" component={SkillCreate} />
+                </div>
+            </BrowserRouter>
+        </ApolloProvider>
     </AppProvider>,
     document.querySelector('#root'),
 );
